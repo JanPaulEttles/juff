@@ -1,0 +1,19 @@
+{
+  "name" : "updateprofile",
+  "type" : "form",
+  "url" : "/updateprofileform",
+  "parameters" : [
+	{ "name" : "username", "value" : "register.username" }
+   ],
+  "inputs" : [
+	{ "name" : "username", "value" : "test", "source" : false },
+	{ "name" : "password", "value" : "test", "source" : false },
+	{ "name" : "email", "value" : "test@test.com", "source" : true },
+	{ "name" : "firstname", "value" : "test", "source" : true },
+	{ "name" : "lastname",  "value" : "test", "source" : true }
+   ],   
+  "submit" : "submitupdateprofile",
+  "expectations" : [
+ 	{ "name" : "content",	"element" : "content", "value" : "Your profile has been updated." }
+  ]
+}

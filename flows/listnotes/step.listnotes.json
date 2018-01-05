@@ -1,0 +1,8 @@
+{
+  "name" : "listnotes",
+  "type" : "get",
+  "url" : "/notes/list",
+  "expectations" : [
+  	{ "name" : "register.lastname",  "element" : "content", "value" : "lastname : {register.lastname}" }
+  ]
+}

@@ -1,0 +1,26 @@
+		//	return 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id))).getText();
+		
+		//javascript:alert(document.documentElement.innerHTML)
+//		javascript:alert(document.getElementById("content").nodeValue);
+//		for(let node of document.body.childNodes) { alert(node); }
+//		javascript:for(let node of document.getElementById("content").childNodes) { alert(node); }
+//	//	javascript:for(let node of document.getElementById("content").childNodes) { for(let n of node){alert(n);} }
+		//javascript:for(let node of document.getElementById("content").childNodes) { for(let n of nodes.childNodes) {alert(n); }}
+		String pageSource = ((JavascriptExecutor)webDriver).executeScript("return document.documentElement.outerHTML;").toString();
+	
+		PrintWriter writer;
+		try {
+			writer = new PrintWriter("the-file-name" + System.currentTimeMillis() + ".txt", "UTF-8");
+			writer.println(pageSource);
+			
+			writer.close();
+
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		logger.log(Level.WARNING, "pagesource: " + pageSource);
+		logger.log(Level.WARNING, "pagesource: " + webDriver.getPageSource());
+		logger.log(Level.WARNING, "GETTEXT: " + wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id))).getText());
+		logger.log(Level.WARNING, "INNERTEXT: " + wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id))).getAttribute("innerText"));
+		logger.log(Level.WARNING, "INNERHTML: " + wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id))).getAttribute("innerHTML"));

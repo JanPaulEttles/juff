@@ -1,0 +1,17 @@
+{
+  "name" : "register",
+  "type" : "form",
+  "url" : "/registerform",
+  "inputs" : [
+	{ "name" : "username", "value" : "test", "source" : true },
+	{ "name" : "password", "value" : "test", "source" : true },
+	{ "name" : "email", "value" : "test@test.com", "source" : true },
+	{ "name" : "firstname", "value" : "test", "source" : true },
+	{ "name" : "lastname",  "value" : "test", "source" : true }
+   ],
+  "submit" : "submitregister",
+  "expectations" : [
+  	{ "name" : "username", "element" : "content", "value" : "User: {username} has been registered." },
+  	{ "name" : "email", "element" : "content", "value" : "An email has been sent to: {email}" }
+  ]
+}	

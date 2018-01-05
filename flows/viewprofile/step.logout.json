@@ -1,0 +1,8 @@
+{
+  "name" : "logout",
+  "type" : "get",
+  "url" : "/logout",
+  "expectations" : [
+  	{ "name" : "loggedinstate",	"element" : "loggedinstate", "value" : "Logged In As: Not Logged In" }
+  ]
+}	

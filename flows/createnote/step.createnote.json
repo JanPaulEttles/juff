@@ -1,0 +1,14 @@
+{
+  "name" : "createnote",
+  "type" : "form",
+  "url" : "/noteform",
+  "inputs" : [
+	{ "name" : "title", "value" : "test", "source" : true },
+	{ "name" : "note", "value" : "test", "source" : true } 
+  ],
+  "submit" : "submitnote",  
+  "expectations" : [
+   	{ "name" : "title",  "element" : "content", "value" : "Title : {title}" },
+  	{ "name" : "note",  "element" : "content", "value" : "Note : {note}" }
+  ]
+}

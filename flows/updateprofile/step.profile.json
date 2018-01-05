@@ -1,0 +1,15 @@
+{
+  "name" : "profile",
+  "type" : "get",
+  "url" : "/profile/view",
+  "parameters" : [
+	{ "name" : "username", "value" : "register.username" }
+   ],
+  "expectations" : [
+   	{ "name" : "register.password",  "element" : "content", "value" : "password : {register.password}" },
+  	{ "name" : "register.username",  "element" : "content", "value" : "username : {register.username}" },
+  	{ "name" : "updateprofile.email",     "element" : "content", "value" : "email : {updateprofile.email}" },
+  	{ "name" : "updateprofile.firstname", "element" : "content", "value" : "firstname : {updateprofile.firstname}" },
+  	{ "name" : "updateprofile.lastname",  "element" : "content", "value" : "lastname : {updateprofile.lastname}" }
+  ]
+}

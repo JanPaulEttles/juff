@@ -1,0 +1,11 @@
+{
+  "name" : "updateprofile",
+  "url" : "https://localhost.ssl:3000",
+    "steps" : [ 
+  	"logout",
+  	"register",
+  	"login",
+  	"updateprofile",
+  	"profile"
+  ]
+}

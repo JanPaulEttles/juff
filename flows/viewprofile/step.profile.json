@@ -1,0 +1,15 @@
+{
+  "name" : "profile",
+  "type" : "get",
+  "url" : "/profile/view",
+  "parameters" : [
+	{ "name" : "username", "value" : "register.username" }
+   ],
+  "expectations" : [
+   	{ "name" : "register.password",  "element" : "content", "value" : "password : {register.password}" },
+  	{ "name" : "register.username",  "element" : "content", "value" : "username : {register.username}" },
+  	{ "name" : "register.email",     "element" : "content", "value" : "email : {register.email}" },
+  	{ "name" : "register.firstname", "element" : "content", "value" : "firstname : {register.firstname}" },
+  	{ "name" : "register.lastname",  "element" : "content", "value" : "lastname : {register.lastname}" }
+  ]
+}

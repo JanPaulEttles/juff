@@ -1,0 +1,13 @@
+{
+  "name" : "login",
+  "type" : "form",
+  "url" : "/loginform",
+  "inputs" : [
+	{ "name" : "username", "value" : "register.username", "source" : false },
+	{ "name" : "password", "value" : "register.password", "source" : false }
+   ],
+  "submit" : "submitlogin",
+  "expectations" : [
+	{ "name" : "register.username", "element" : "loggedinstate", "value" : "Logged In As: {register.username}" }
+  ]
+}	
